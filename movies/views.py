@@ -2,7 +2,32 @@ from django.shortcuts import render
 
 
 kategori_liste=["macera","romantik","dram","bilim kurgu","aksiyon"]
-film_liste=["film 1","film 2","film 3"]
+film_liste=[
+    {
+        "film_adi":"film 1",
+        "aciklama":"film 1 açıklama",
+        "resim":"1.jpg",
+        "anasayfa":True
+    },
+    {
+        "film_adi":"film 2",
+        "aciklama":"film 2 açıklama",
+        "resim":"2.jpg",
+        "anasayfa":True
+    },
+    {
+        "film_adi":"film 3",
+        "aciklama":"film 3 açıklama",
+        "resim":"3.jpg",
+        "anasayfa":False
+    },
+    {
+        "film_adi":"film 4",
+        "aciklama":"film 4 açıklama",
+        "resim":"4.jpg",
+        "anasayfa":False
+    }
+]
 
 
 def home(request):
@@ -14,5 +39,8 @@ def home(request):
     return render(request,"index.html",data)
 
 def movies(request):
-
-    return render(request,"movies.html")
+     data={
+        "kategori":kategori_liste,
+        "film":film_liste
+    }
+     return render(request,"movies.html",data)

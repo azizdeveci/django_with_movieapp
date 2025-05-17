@@ -1,3 +1,5 @@
+{% load static %}
+
 <h1>Home Page</h1>
 
 <ul>
@@ -12,10 +14,20 @@
 <div id="film">
 
     {% for film in film%}
-        
-        <p>{{film}}</p>
 
-    {% endfor%}
+        {% if film.anasayfa %}
+            <div>
+
+                <p>{{film.film_adi}}</p>
+                <p>{{film.aciklama}}</p>
+                <img src="{% static 'img/'|add:film.resim %}" alt="">
+            </div>
+
+        {% endif %}
+    {% endfor %}
 </div>
+
+
+
 
 

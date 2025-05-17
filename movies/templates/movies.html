@@ -1,1 +1,17 @@
 <h1>Movies Page</h1>
+
+<div id="film">
+
+    {% for film in film%}
+
+        
+            <div>
+
+                <p>{{film.film_adi}}</p>
+                <p>{{film.aciklama}}</p>
+                <img src="{{film.resim}}" alt="">
+            </div>
+
+       
+    {% endfor %}
+</div>
