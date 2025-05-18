@@ -54,8 +54,5 @@ Uygulama aşağıdaki URL'ler üzerinden erişilebilir:
 4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
 5. Pull Request oluşturun
 
-## Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
 
 ![Uygulama Ekran Görüntüsü](https://github.com/azizdeveci/django_with_movieapp/blob/django_with_movieapp/movies/static/img/ss.jpg) 
